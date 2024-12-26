@@ -142,6 +142,37 @@
       "id": "41d3",
       "email": "ashok@gmail.com",
       "password": "123123"
+    },
+    {
+      "id": "3e82",
+      "email": "asiugyg@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "1461",
+      "email": "afsfhiybh@gmail.com",
+      "password": "12357"
+    },
+    {
+      "id": "6cb5",
+      "username": "ashok",
+      "email": "gorantlaashok957@gmail.com",
+      "contactInfo": "9347557729",
+      "password": "Ashok@8456",
+      "trainingPreference": "In-Person"
+    },
+    {
+      "id": "4771",
+      "username": "ravi",
+      "email": "ravidasaroju012@gmil.com",
+      "contactInfo": "1234567890",
+      "password": "Ravi@123",
+      "trainingPreference": "Online"
+    },
+    {
+      "id": "4694",
+      "email": "3hqgjk@gmail.com",
+      "password": "qwdcghsjk"
     }
   ]
 }

@@ -13,7 +13,7 @@ import {
   Box,
   Badge,
 } from "@mui/material";
-import { Menu as MenuIcon, Notifications, AccountCircle, Brightness4, Brightness7 } from "@mui/icons-material";
+import { Menu as MenuIcon, Notifications, AccountCircle, Brightness4, Brightness7, Help } from "@mui/icons-material";  // Added Help Icon
 import { useNavigate } from "react-router-dom";
 import { useThemeContext } from "./Theme";
 import { Link } from "react-router-dom"; // Import Link for routing
@@ -126,6 +126,10 @@ const NavbarPage = () => {
                   <ListItemText primary={darkMode ? "Light Mode" : "Dark Mode"} />
                   {darkMode ? <Brightness7 /> : <Brightness4 />}
                 </ListItem>
+                <ListItem button onClick={() => handleNavigation("/help")}> {/* Added Help item */}
+                  <ListItemText primary="Help" />
+                  <Help />
+                </ListItem>
                 {!isAuthenticated ? (
                   <ListItem button onClick={handleSignIn}>
                     <ListItemText primary="Sign In" />
@@ -165,6 +169,9 @@ const NavbarPage = () => {
             <IconButton color="inherit" onClick={toggleTheme}>
               {darkMode ? <Brightness7 /> : <Brightness4 />}
             </IconButton>
+            <Button color="inherit" onClick={() => handleNavigation("/help")}> {/* Added Help Button */}
+              Help
+            </Button>
             {isAuthenticated && (
               <IconButton color="inherit" onClick={() => handleNavigation("/profile")}>
                 <AccountCircle />

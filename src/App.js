@@ -16,7 +16,6 @@ import ScrollToTop from './Componets/Scroll';
 import Profile from './Pages/Profile';
 import PaymentIntegrationPage from './Pages/Payment';
 import HelpAndSupport from './Pages/Help';
-
 import HomePage from './Pages/HomePage'; // Import your Homepage component
 
 function App() {
@@ -39,7 +38,7 @@ const MainContent = () => {
       <div style={{ flexGrow: 1 }}>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Added homepage route */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/dietary" element={<DietaryTrackingPage />} />
           <Route path="/meal" element={<MealPlanner />} />
           <Route path="/recipes" element={<RecipeLibrary />} />
@@ -50,7 +49,7 @@ const MainContent = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/payment" element={<PaymentIntegrationPage />} />
-          <Route path="/help" element={<HelpAndSupport />} />
+          <Route path="/help" element={<HelpAndSupport />} /> {/* Added Help Route */}
         </Routes>
       </div>
 
