@@ -1,0 +1,147 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "exampleUser",
+      "email": "example@email.com",
+      "contactInfo": "1234567890",
+      "password": "hashedPassword",
+      "trainingPreference": "Online"
+    },
+    {
+      "id": "5b44",
+      "username": "Rajeshwari",
+      "email": "ok@gmail.com",
+      "contactInfo": "7396898402",
+      "password": "123456",
+      "trainingPreference": "Online",
+      "trainingPreferences": "online",
+      "themePreferences": "Light",
+      "notifications": {
+        "liveStream": false,
+        "vodUpload": false,
+        "subscriptionUpdate": false,
+        "systemNotification": false
+      },
+      "profilePhoto": "https://img.freepik.com/free-photo/3d-illustration-beautiful-businesswoman-glasses-standing-near-car_1057-44928.jpg?t=st=1734956872~exp=1734960472~hmac=5e421f21e6ada9ace7fffe5c23dd40335edd0dbecb042b1c4066781585fa2178&w=740"
+    },
+    {
+      "id": "f078",
+      "username": "Ashok",
+      "email": "ashok@gmail.com",
+      "contactInfo": "9090909090",
+      "password": "123123",
+      "trainingPreference": "In-Person",
+      "profilePhoto": "https://img.freepik.com/free-photo/3d-rendering-boy-wearing-cap-with-letter-r_1142-40523.jpg?t=st=1734956949~exp=1734960549~hmac=72d113a9e6b062eb83a15e9e4d8ed5934156191440e5cfc922f9030b2f41ca48&w=740",
+      "trainingPreferences": "",
+      "themePreferences": "Light",
+      "notifications": {
+        "liveStream": true,
+        "vodUpload": true,
+        "subscriptionUpdate": true,
+        "systemNotification": true
+      },
+      "dietaryPreferences": "",
+      "healthHistory": ""
+    },
+    {
+      "id": "50ee",
+      "username": "ashok123",
+      "email": "gorantla@gmail.com",
+      "contactInfo": "9347557729",
+      "password": "Ashok@123",
+      "trainingPreference": "In-Person"
+    },
+    {
+      "id": "7a43",
+      "email": "ashok@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "571e",
+      "email": "gorantla@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "af0a",
+      "email": "gorantla@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "ada6",
+      "email": "ashok@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "dd38",
+      "email": "gorantla@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "0385",
+      "email": "gorantla@gmail.com",
+      "password": "Ashok@8456"
+    },
+    {
+      "id": "6d8d",
+      "email": "gorantla@gmail.com",
+      "password": "Ashok@8456"
+    },
+    {
+      "id": "db08",
+      "username": "as",
+      "email": "gorantlaashok12@gmail.com",
+      "contactInfo": "9347557729",
+      "password": "Ashok@8456",
+      "trainingPreference": "Online"
+    },
+    {
+      "id": "7c4f",
+      "email": "gorantlaashok12@gmail.com",
+      "password": "Ashok@8456"
+    },
+    {
+      "id": "d40e",
+      "username": "ashok123",
+      "email": "gorantla1@gmail.com",
+      "contactInfo": "9347557729",
+      "password": "Ashok@123",
+      "trainingPreference": "Online"
+    },
+    {
+      "id": "7850",
+      "email": "gorantla1@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "e519",
+      "email": "gorantla1@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "213e",
+      "email": "gorantla1@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "c160",
+      "email": "gorantla1@gmail.com",
+      "password": "Ashok@123"
+    },
+    {
+      "id": "ca91",
+      "email": "ashok@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "56cd",
+      "email": "ashok@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "41d3",
+      "email": "ashok@gmail.com",
+      "password": "123123"
+    }
+  ]
+}
