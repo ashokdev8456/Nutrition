@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { TextField, Button, Typography, Container, Box, Link, InputAdornment, IconButton, CircularProgress } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Typography,
+  Container,
+  Box,
+  Link,
+  InputAdornment,
+  IconButton,
+  CircularProgress,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useThemeContext } from "./Theme";
@@ -14,8 +24,10 @@ const Signin = ({ projectColor }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Client-side email validation
   const validateEmail = (email) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
 
+  // Handle sign-in logic
   const handleSignin = async (e) => {
     e.preventDefault();
 
@@ -31,18 +43,16 @@ const Signin = ({ projectColor }) => {
     }
 
     setLoading(true);
-    try {
-      const response = await axios.post("http://localhost:3000/users", { email, password }); // Correct endpoint
 
+    try {
+      const response = await axios.post("http://localhost:3000/users", { email, password });
 
       console.log(response);
       
 
       if (response.data ) {
-        localStorage.setItem("userId", response.data.id);
-        console.log(response.data.id);
-        
-        navigate("/"); // Redirect to home page after successful login
+        localStorage.setItem("userId", response.data.id); // Store userId in localStorage
+        navigate("/profile"); // Redirect to profile page after successful login
       } else {
         setErrorMessage(response.data.message || "Invalid email or password");
       }
@@ -89,8 +99,10 @@ const Signin = ({ projectColor }) => {
           Sign In
         </Typography>
 
+        {/* Show error message if any */}
         {errorMessage && <Typography color="error" variant="body2" sx={{ mb: 2 }}>{errorMessage}</Typography>}
-        
+
+        {/* SignIn Form */}
         <form onSubmit={handleSignin} style={{ width: "100%" }}>
           <TextField
             margin="normal"

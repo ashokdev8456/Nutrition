@@ -25,6 +25,7 @@ const NavbarPage = () => {
   const { darkMode, toggleTheme } = useThemeContext();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery((theme) => theme.breakpoints.between("sm", "md"));
+  const isDesktop = useMediaQuery((theme) => theme.breakpoints.up("md")); // Detect desktop/laptop screens
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -123,6 +124,7 @@ const NavbarPage = () => {
                   }}
                   sx={{ color: darkMode ? "#fff" : "#212121" }}
                 >
+                  
                   <ListItemText primary={darkMode ? "Light Mode" : "Dark Mode"} />
                   {darkMode ? <Brightness7 /> : <Brightness4 />}
                 </ListItem>
@@ -130,6 +132,12 @@ const NavbarPage = () => {
                   <ListItemText primary="Help" />
                   <Help />
                 </ListItem>
+                {isAuthenticated && (
+                  <ListItem button onClick={() => handleNavigation("/profile")}>
+                    <ListItemText primary="Profile" />
+                    <AccountCircle />
+                  </ListItem>
+                )}
                 {!isAuthenticated ? (
                   <ListItem button onClick={handleSignIn}>
                     <ListItemText primary="Sign In" />
@@ -139,6 +147,7 @@ const NavbarPage = () => {
                     <ListItemText primary="Sign Out" />
                   </ListItem>
                 )}
+                
               </List>
             </Drawer>
           </>
@@ -161,19 +170,35 @@ const NavbarPage = () => {
                 {page.name}
               </Button>
             ))}
-            <IconButton color="inherit" onClick={() => handleNavigation("/notifications")}>
+            <IconButton
+              color="inherit"
+              onClick={() => handleNavigation("/notifications")}
+              sx={{ display: isDesktop ? "block" : "none" }} // Show only on desktop
+            >
               <Badge badgeContent={notificationCount} color="error">
                 <Notifications />
               </Badge>
             </IconButton>
-            <IconButton color="inherit" onClick={toggleTheme}>
+            <IconButton
+              color="inherit"
+              onClick={toggleTheme}
+              sx={{ display: isDesktop ? "block" : "none" }} // Show only on desktop
+            >
               {darkMode ? <Brightness7 /> : <Brightness4 />}
             </IconButton>
-            <Button color="inherit" onClick={() => handleNavigation("/help")}> {/* Added Help Button */}
+            <Button
+              color="inherit"
+              onClick={() => handleNavigation("/help")}
+              sx={{ display: isDesktop ? "block" : "none",  }} // Show only on desktop
+            >
               Help
             </Button>
+            {/* Display AccountCircle icon only when authenticated */}
             {isAuthenticated && (
-              <IconButton color="inherit" onClick={() => handleNavigation("/profile")}>
+              <IconButton
+                color="inherit"
+                onClick={() => handleNavigation("/profile")}
+              >
                 <AccountCircle />
               </IconButton>
             )}
